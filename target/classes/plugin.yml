@@ -1,14 +1,16 @@
 name: PaPiTest
 prefix: PaPiTest
-version: 0.1
+version: 1.0
 main: de.jatitv.papitest.system.Main
 softdepend: [ PlaceholderAPI ]
 authors: [ JaTiTV ]
-description: Test your Placeholder
+description: With PaPiTest you can query and test all placeholders of PlaceholderAPI and other plugins that use the PlaceholderAPI. This can also be very useful for programming testing.
+website: https://www.spigotmc.org/resources/papitest.90439/
 commands:
   papitest:
-    description: test a placeholder
+    description: Test and view a placeholder.
 
 permissions:
   papitest.admin:
+    description: Test and view a placeholder.
     default: op

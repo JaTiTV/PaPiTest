@@ -15,7 +15,7 @@ public final class Main extends JavaPlugin {
     // Debug Settings
     public static String PrefixHC = "§8[§5PaPi§6Test§8] ";
     public static String Autor = "JaTiTV";
-    public static String Spigot = "Coming soon";
+    public static String Spigot = "https://www.spigotmc.org/resources/papitest.90439/";
     public static String DiscordLink = "https://discord.gg/vRyXFFterJ";
     public static String DiscordMSG = "You want to discuss and decide about current bugs, planned updates, new features?\n" +
             "Then come to our Discord. " + DiscordLink;
@@ -75,7 +75,7 @@ public final class Main extends JavaPlugin {
 
         int taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
             public void run() {
-                (new UpdateChecker((JavaPlugin) Main.thisp(), 0000)).getVersion((version) -> {
+                (new UpdateChecker((JavaPlugin) Main.thisp(), 90439)).getVersion((version) -> {
                     String foundVersion = Main.thisp().getDescription().getVersion();
                     if (!foundVersion.equalsIgnoreCase(version)) {
                         update_version = version;

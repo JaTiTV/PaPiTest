@@ -56,9 +56,9 @@ public class CmdExecuter implements CommandExecutor {
                         if (Main.PaPi) {
                             if (sender instanceof Player) {
                                 Player player = (Player) sender;
-                                sender.sendMessage(Main.PrefixHC + "§b" + "%" + args[0] + "%" + " §7-> " + "§6" + PlaceholderAPI.setPlaceholders(player, "%" + args[0].replace("%", "") + "%"));
+                                sender.sendMessage(Main.PrefixHC + "§b" + args[0] + " §7-> " + "§6" + PlaceholderAPI.setPlaceholders(player, args[0]));
                                 if (!Main.minecraft1_8 && Config.Titel) {
-                                    player.sendTitle("§5PaPi§6Test§8: " + "§b" + "%" + args[0].replace("%", "") + "%", "§6" + PlaceholderAPI.setPlaceholders(player, "%" + args[0].replace("%", "") + "%"));
+                                    player.sendTitle("§5PaPi§6Test§8: " + "§b" + args[0], "§6" + PlaceholderAPI.setPlaceholders(player, args[0]));
                                 }
                             } else {
                                 sender.sendMessage(Main.PrefixHC + "§4Placeholders can be tested only by players and not from the Console!");
