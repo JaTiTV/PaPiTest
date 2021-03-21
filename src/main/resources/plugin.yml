@@ -1,0 +1,14 @@
+name: PaPiTest
+version: 0.1
+main: de.jatitv.papitest.system.Main
+api-version: 1.16
+softdepend: [ PlaceholderAPI ]
+authors: [ JaTiTV ]
+description: Test your Placeholder
+commands:
+  papitest:
+    description: test a placeholder
+
+permissions:
+  papitest.admin:
+    default: op
