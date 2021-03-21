@@ -33,6 +33,7 @@ public class TabComplete implements TabCompleter {
 
                     if (sender.hasPermission("papitest.admin") || sender.isOp()) {
                         list.add("<placeholder>");
+                        list.add("info");
                         list.add("reload");
                     }
                     return list;

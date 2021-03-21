@@ -69,7 +69,7 @@ public final class Main extends JavaPlugin {
             getCommand("papitest").setTabCompleter(new TabComplete());
         }
 
-        int pluginId = 0000; // <-- Replace with the id of your plugin!
+        int pluginId = 10767; // <-- Replace with the id of your plugin!
         Metrics metrics = new Metrics(this, pluginId);
 
 
