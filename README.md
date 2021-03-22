@@ -21,5 +21,5 @@ Komm für weitere Fragen einfach auf den Support Discord.
 ---
 
 # Links
-* [Download](https://www.spigotmc.org/resources/wonderbagshop.89234/)
+* [Download](https://www.spigotmc.org/resources/papitest.90439/)
 * [Discord](https://discord.gg/vRyXFFterJ)
