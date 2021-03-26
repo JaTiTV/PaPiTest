@@ -21,6 +21,9 @@ public class CmdExecuter implements CommandExecutor {
                 sender.sendMessage(Main.PrefixHC + "§cPlease use §6/papitest §7%placeholder%");
             } else {
                 switch (args[0].toLowerCase()) {
+                    case "<placeholder>":
+                        sender.sendMessage(Main.PrefixHC + "§cPlease use §6/papitest §7%placeholder%");
+                        break;
                     case "info":
                     case "plugin":
                     case "pl":

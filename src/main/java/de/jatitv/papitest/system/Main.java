@@ -65,7 +65,7 @@ public final class Main extends JavaPlugin {
 
         getCommand("papitest").setExecutor(new CmdExecuter());
         Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
-        if (!minecraft1_8){
+        if (!minecraft1_8) {
             getCommand("papitest").setTabCompleter(new TabComplete());
         }
 
@@ -77,8 +77,8 @@ public final class Main extends JavaPlugin {
             public void run() {
                 (new UpdateChecker((JavaPlugin) Main.thisp(), 90439)).getVersion((version) -> {
                     String foundVersion = Main.thisp().getDescription().getVersion();
+                    update_version = version;
                     if (!foundVersion.equalsIgnoreCase(version)) {
-                        update_version = version;
                         String updateFound = (PrefixHC + "§6A new version of §8[§5PaPi§6Test§8]§6 was found!");
                         String yourVersion = (PrefixHC + "§6Your version §c" + foundVersion);
                         String currentVersion = (PrefixHC + "§6Current version: §a" + version);
@@ -107,7 +107,7 @@ public final class Main extends JavaPlugin {
                     }
                 });
             }
-        }, 0L, 20 * 60 * 60L);
+        }, 0L, 20 * 60 * 20L);
     }
 
     @Override
