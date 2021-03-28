@@ -64,10 +64,8 @@ public final class Main extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage(PrefixHC + "§2Plugin loaded successfully.");
 
         getCommand("papitest").setExecutor(new CmdExecuter());
+        getCommand("papitest").setTabCompleter(new TabComplete());
         Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
-        if (!minecraft1_8) {
-            getCommand("papitest").setTabCompleter(new TabComplete());
-        }
 
         int pluginId = 10767; // <-- Replace with the id of your plugin!
         Metrics metrics = new Metrics(this, pluginId);

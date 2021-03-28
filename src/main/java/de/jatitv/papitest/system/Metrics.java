@@ -1,6 +1,5 @@
 // This claas was created by JaTiTV
 
-
 package de.jatitv.papitest.system;
 
 import java.io.BufferedReader;

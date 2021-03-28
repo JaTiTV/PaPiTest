@@ -15,10 +15,9 @@ public class JoinEvent implements Listener {
     @EventHandler
     public void onJoinEvent(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        player.sendMessage(Main.update_version);
+        String foundVersion = Main.getPlugin().getDescription().getVersion();
         if (player.hasPermission("papitest.admin") || player.isOp()) {
-            if (Main.update_version != null) {
-                String foundVersion = Main.getPlugin().getDescription().getVersion();
+            if (!foundVersion.equals(Main.update_version)) {
                 String updateFound = (Main.PrefixHC + "§6A new version of §8[§5PaPi§6Test§8]§6 was found!");
                 String yourVersion = (Main.PrefixHC + "§6Your version §c" + foundVersion);
                 String currentVersion = (Main.PrefixHC + "§6Current version: §a" + Main.update_version);

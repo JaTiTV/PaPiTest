@@ -1,6 +1,5 @@
 // This claas was created by JaTiTV
 
-
 package de.jatitv.papitest.config;
 
 import de.jatitv.papitest.system.Main;
@@ -48,7 +47,6 @@ public class Config {
                 Bukkit.getConsoleSender().sendMessage(Main.PrefixHC + "§4Setting §6Titel Enable §4was added to §9Config.yml§4!");
             }
         }
-
 
         try {
             yamlConfiguration_config.save(configYML);
