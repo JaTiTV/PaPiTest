@@ -11,45 +11,37 @@ import java.io.IOException;
 
 public class Config {
 
+    public static Integer ConfigVersion = 1;
+
     public static Boolean UpdateCheckOnJoin = true;
     public static Boolean Titel = true;
 
     public static void configCreate() {
 
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
-        YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
+        YamlConfiguration yamlConfiguration = YamlConfiguration.loadConfiguration(configYML);
 
         Bukkit.getConsoleSender().sendMessage(Main.PrefixHC + "§4Config.yml load...");
 
-        if (!yamlConfiguration_config.contains("Do_not_remove_or_change.Created")) {
-            yamlConfiguration_config.set("Do_not_remove_or_change.Created", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
-        }
+        yamlConfiguration.set("ConfigVersion", ConfigVersion);
 
-        yamlConfiguration_config.set("Do_not_remove_or_change.Version", Main.getPlugin().getDescription().getVersion());
-
-        yamlConfiguration_config.set("Do_not_remove_or_change.Autor", Main.Autor);
-
-        yamlConfiguration_config.set("Do_not_remove_or_change.Spigot", Main.Spigot);
-
-        yamlConfiguration_config.set("Do_not_remove_or_change.Discord", Main.DiscordMSG);
-
-        if (yamlConfiguration_config.contains("Plugin.UpdateCheckOnJoin")) {
-            UpdateCheckOnJoin = yamlConfiguration_config.getBoolean("Plugin.UpdateCheckOnJoin");
+        if (yamlConfiguration.contains("Plugin.UpdateCheckOnJoin")) {
+            UpdateCheckOnJoin = yamlConfiguration.getBoolean("Plugin.UpdateCheckOnJoin");
         } else {
-            yamlConfiguration_config.set("Plugin.UpdateCheckOnJoin", true);
+            yamlConfiguration.set("Plugin.UpdateCheckOnJoin", true);
             Bukkit.getConsoleSender().sendMessage(Main.PrefixHC + "§4Setting §6UpdateCheckOnJoin §4was added to §9Config.yml§4!");
         }
         if (!Main.minecraft1_8) {
-            if (yamlConfiguration_config.contains("Titel.Enable")) {
-                Titel = yamlConfiguration_config.getBoolean("Titel.Enable");
+            if (yamlConfiguration.contains("Titel.Enable")) {
+                Titel = yamlConfiguration.getBoolean("Titel.Enable");
             } else {
-                yamlConfiguration_config.set("Titel.Enable", true);
+                yamlConfiguration.set("Titel.Enable", true);
                 Bukkit.getConsoleSender().sendMessage(Main.PrefixHC + "§4Setting §6Titel Enable §4was added to §9Config.yml§4!");
             }
         }
 
         try {
-            yamlConfiguration_config.save(configYML);
+            yamlConfiguration.save(configYML);
         } catch (
                 IOException e) {
             e.printStackTrace();

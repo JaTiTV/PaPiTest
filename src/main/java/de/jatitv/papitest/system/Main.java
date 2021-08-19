@@ -16,9 +16,7 @@ public final class Main extends JavaPlugin {
     public static String PrefixHC = "§8[§5PaPi§6Test§8] ";
     public static String Autor = "JaTiTV";
     public static String Spigot = "https://www.spigotmc.org/resources/papitest.90439/";
-    public static String DiscordLink = "https://discord.gg/vRyXFFterJ";
-    public static String DiscordMSG = "You want to discuss and decide about current bugs, planned updates, new features?\n" +
-            "Then come to our Discord. " + DiscordLink;
+    public static String DiscordLink = "http://dc.t2code.net";
 
 
     // ---------------------------------------------
